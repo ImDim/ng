@@ -1,0 +1,36 @@
+$main_font_family: Arial, sans-serif;
+$second_font_family: Arial, cursive;
+
+
+$theme-silk: (
+
+        html_bg_color: #f7f7f7,
+        main_color: #000,
+
+        dropdown_menu_dark: #1f2637,
+
+
+);
+
+
+$theme: $theme-silk;
+
+
+@mixin flex( $jc, $ai ) {
+
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+
+}
+
+//Цвет dropdown burger
+@mixin burger-bg-filling( $color ) {
+
+    &::before, &::after, .filling {
+
+        background: $color;
+
+    }
+
+}

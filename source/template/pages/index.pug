@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        block title
+            title Chat 1.0.0
+        meta(content="Дмитрий Рыбкин" name="author")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+        link(rel='stylesheet' href='assets/css/app.css')
+        link(rel="icon" href="assets/img/logo.png")
+
+
+    body#body
+
+        include ../content/index
+
+
+        //For browser-sync
+        script(type='text/javascript', id='__bs_script__')
+            | //<![CDATA[
+            | document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=3.10.10'><\/script>".replace("HOST", location.hostname));
+            | //]]>
+
+        script(src='assets/js/app.js' defer)
+        script(src='assets/js/libraries/onload.js' defer)

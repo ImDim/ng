@@ -1,0 +1,22 @@
+{
+  "name": "rybkin",
+  "description": "ng test",
+  "main": "gulpfile.js",
+  "authors": [
+    "d.rybkin"
+  ],
+  "license": "ISC",
+  "homepage": "http://ng.dev",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0.0-beta.3",
+    "jquery": "^3.2.1"
+  }
+}
