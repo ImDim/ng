@@ -9,5 +9,6 @@ module.exports = function() {
 
     $.gulp.watch('./source/js/libraries/**/*.*', $.gulp.series('copy:js'));
     $.gulp.watch('./source/style/**/**/*.css', $.gulp.series('css'));
+    $.gulp.watch('./source/static/**/*.*', $.gulp.series('static'));
   });
 };

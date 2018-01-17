@@ -1,0 +1,21 @@
+header.header.d-flex.align-items-center.justify-content-between
+
+        .search
+
+            .search__icon.fa.fa-search(aria-hidden="true")
+            input.search__input(type="text" placeholder="Search..")
+
+        .dropdown.orderby
+
+            #orderby__select.orderby__select.dropdown-toggle(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                span.orderby__text Sort by
+                b.orderby__option Newlest
+
+
+
+            .dropdown-menu(aria-labelledby="orderby__select")
+                a.dropdown-item Имени
+                a.dropdown-item Вес
+                a.dropdown-item Цена
+                a.dropdown-item В наличии
+

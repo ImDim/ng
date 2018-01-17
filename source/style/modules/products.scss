@@ -1,0 +1,178 @@
+.product {
+
+    padding: 15px 25px;
+    border-bottom: 1px solid #E9EEF3;
+
+    &__thumb {
+
+        img {
+
+            width: 150px;
+            height: auto;
+            margin-right: 25px;
+
+        }
+
+    }
+
+    &__title {
+
+        cursor: pointer;
+        float: left;
+
+        a {
+
+            font-weight: bold;
+            color: #ea5a5a;
+            text-decoration: none;
+
+        }
+
+    }
+
+    &__price {
+
+        float: right;
+        font-weight: bold;
+        color: #d04949bd;
+
+    }
+
+    &__desc {
+
+        color: #8E9AA9;
+        font-size: 14px;
+        clear: both;
+
+    }
+
+
+}
+
+.product_info {
+
+    margin-top: 15px;
+    font-size: 13px;
+    color: #bd8253;
+
+}
+
+.product_title {
+
+    font-size: 24px;
+    float: left;
+    color: #ffffffee;
+    margin-bottom: 0;
+
+}
+
+.product_price {
+
+    float: right;
+    font-weight: bold;
+    color: #ffffffee;
+
+}
+
+.product_details {
+
+    padding: 15px 25px;
+    color:rgba(0, 0, 0, 0.75);
+    line-height: 1.5rem;
+
+    &__image {
+
+        text-align: center;
+        clear: both;
+        margin-top: 25px;
+
+        img {
+
+            max-width: 50%;
+
+        }
+
+    }
+
+    .thumbs_wrapper {
+
+        width: 100%;
+        height: 120px;
+        margin-top: 50px;
+        overflow-x: auto;
+
+    }
+
+    &__thumbs {
+
+        position: absolute;
+        left: 0;
+
+    }
+
+    &__thumb {
+
+        margin: 0 15px;
+        cursor: pointer;
+
+        img {
+
+            height: 100px;
+
+        }
+
+    }
+
+    &__info {
+
+        margin-top: 40px;
+
+    }
+
+    .product_options {
+
+        
+
+        &__li {
+
+            margin-top: 25px;
+
+        }
+
+        &__header {
+
+            font-size: 19px;
+            margin-top: 30px;
+            font-weight: bold;
+            color: #d04949bd;
+
+        }
+
+        &__item {
+
+            @include flex(start, center);
+
+        }
+
+        &__list {
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-top: 10px;
+
+        }
+
+        &__name {
+
+            width: 300px;
+            font-weight: normal;
+            flex-shrink: 0;
+
+        }
+
+        
+
+    }
+
+}

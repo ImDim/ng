@@ -1,0 +1,13 @@
+[
+
+    {"title": "Яблоко", "type": "fruit"},
+    {"title": "Апельсин", "type": "fruit"},
+    {"title": "Груша", "type": "fruit"},
+    {"title": "Банан", "type": "fruit"},
+    {"title": "Манго", "type": "fruit"},
+    {"title": "Огурец", "type": "veg"},
+    {"title": "Картофель", "type": "veg"},
+    {"title": "Тыква", "type": "veg"},
+    {"title": "Помидор", "type": "veg"}
+
+]

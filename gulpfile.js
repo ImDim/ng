@@ -27,7 +27,8 @@ $.gulp.task('start', $.gulp.series(
         'copy:image',
         'copy:js',
         'copy:fonts',
-        'icons'
+        'icons',
+        'static'
         //'sprite'
     ),
     $.gulp.parallel(

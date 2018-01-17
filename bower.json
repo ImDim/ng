@@ -18,5 +18,13 @@
   "dependencies": {
     "bootstrap": "4.0.0-beta.3",
     "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "angular-resource": "^1.6.8",
+    "angular-route": "^1.6.8",
+    "angular": "^1.6.8",
+    "jquery": "^3.2.1",
+    "bootstrap": "4.0.0-beta.3",
+    "components-font-awesome": "^4.7.0"
   }
 }

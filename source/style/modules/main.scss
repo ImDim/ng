@@ -1,0 +1,107 @@
+body, html {
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    background: url(../img/cover.png) #1c1f27;
+
+}
+
+
+
+div {
+
+    position: relative;
+
+}
+
+input {
+
+    &:focus, &:active {
+
+        outline: none;
+
+    }
+
+}
+
+.main_container {
+
+    height: 800px;
+    width: 100%;
+    max-width: 1000px;
+    
+
+}
+
+.main_wrapper {
+
+    height: 800px;
+
+}
+
+.main_content {
+
+    overflow-y: auto;
+    position: absolute;
+    bottom: 0;
+    top: 76px;
+    left: 0px;
+
+}
+
+.no-list {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+///////////////////////////////////
+.main_wrapper {
+
+    background: #FFF;
+
+}
+
+.stat {
+
+    background: #F4F7FA;
+    border-bottom: 1px solid #E2E7EC;
+
+    &__item {
+
+        color: #5A6779;
+        text-align: center;
+        border-right: 1px solid #E2E7EC;
+
+        padding: 25px 0;
+
+        &:last-of-type {
+
+            border-right: 0;
+
+        }
+
+    }
+
+    &__counter {
+
+        font-size: 40px;
+        font-weight: bold;
+
+    }
+
+    &__small {
+
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #8E9AA9;
+
+    }
+
+}

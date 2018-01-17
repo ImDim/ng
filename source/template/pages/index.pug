@@ -1,9 +1,10 @@
 doctype html
-html
+html(ng-app="phoneStoreApp")
     head
+        base(href="/")
         meta(charset="utf-8")
         block title
-            title Chat 1.0.0
+            title skillApp
         meta(content="Дмитрий Рыбкин" name="author")
         meta(content="width=device-width, initial-scale=1" name="viewport")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
@@ -12,10 +13,16 @@ html
         link(rel="icon" href="assets/img/logo.png")
 
 
-    body#body
+    body#body.d-flex.justify-content-center.align-items-center(ng-controller="MainStoreCtrl")
 
-        include ../content/index
+        .main_container
 
+            .main_wrapper.d-flex.align-items-stretch.no-gutters
+
+                include ../modules/sidebar
+
+                include ../content/index
+        
 
         //For browser-sync
         script(type='text/javascript', id='__bs_script__')

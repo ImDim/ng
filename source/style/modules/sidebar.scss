@@ -1,0 +1,90 @@
+//Left Navigation
+.navigation {
+
+    width: 80px;
+    flex-shrink: 0;
+    background: #313541;
+    
+    &__item {
+
+        padding: 15px 0;
+
+        color: #6A7583;
+        text-align: center;
+        cursor: pointer;
+        display: block;
+
+        transition: all .2s ease;
+
+        &:hover {
+
+            color: #6A7583;
+            text-decoration: none;
+            background: #414552;
+
+        }
+
+        &_active {
+
+            &:hover {
+
+                color: #FFF;
+                background: #EA5A5A;
+
+            }
+
+            background: #EA5A5A;
+            color: #FFF;
+            cursor: text;
+
+        }
+
+    }
+
+    &__icon {
+
+        font-size: 24px;
+
+    }
+
+    &__text {
+
+        font-size: 13px;
+        font-weight: bold;
+
+    }
+
+
+}
+
+.sidebar {
+
+    width: 250px;
+    padding: 25px 15px;
+    background: #282C37;
+    flex-shrink: 0;
+
+    &_menu {
+
+        &__item {
+
+            padding: 10px 15px;
+            color: #6A7583;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+
+            &_active {
+
+                background: #1F222D;
+                color: #FFF;
+                cursor: text;
+
+            }
+
+        }
+
+    }
+
+}
