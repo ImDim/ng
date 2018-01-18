@@ -18,31 +18,32 @@ header.header.d-flex.align-items-center.justify-content-between
             //pre {{item | json}}
 
 
-.main_content
+.main_wrapper
+    .main_content
 
-    .products
-    
-        .product.d-flex.row.no-gutters(ng-repeat="phone in phoneList | filter:search_query | orderBy:orderVal:orderReverse")
+        .products
+        
+            .product.d-flex.row.no-gutters(ng-repeat="phone in phoneList | filter:search_query | orderBy:orderVal:orderReverse")
 
-            .product__thumb
-                img(ng-src="{{phone.imageUrl}}" alt="{{phone.name}}")
+                .product__thumb
+                    img(ng-src="{{phone.imageUrl}}" alt="{{phone.name}}")
 
-            .product__inner.col-12.col-md
+                .product__inner.col-12.col-md
 
-                .product__title
-                    a(ng-href="/phones/{{phone.id}}")
-                        |{{phone.name}}
-                .product__price 
-                    |{{phone.price | currency}}
+                    .product__title
+                        a(ng-href="/phones/{{phone.id}}")
+                            |{{phone.name}}
+                    .product__price 
+                        |{{phone.price | currency}}
 
-                .product__desc
-                    | {{phone.snippet}}
+                    .product__desc
+                        | {{phone.snippet}}
 
-                .product_info
+                    .product_info.w-100
 
-                    .product_info__elem(ng-hide="{{!phone.status}}")
-                        span.text В наличии
-                        .fa.fa-check(aria-hidden="true")
+                        .product_info__elem(ng-hide="{{!phone.status}}")
+                            span.text В наличии
+                            .fa.fa-check(aria-hidden="true")
 
-                    .product_info__elem(ng-hide="{{phone.status}}")
-                        span.text Нет в наличии
+                        .product_info__elem(ng-hide="{{phone.status}}")
+                            span.text Нет в наличии 

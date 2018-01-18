@@ -39,17 +39,18 @@ input {
 
 .main_wrapper {
 
-    height: 800px;
+    height: 700px;
+    overflow-y: auto;
 
 }
 
 .main_content {
 
-    overflow-y: auto;
     position: absolute;
-    bottom: 0;
-    top: 76px;
+    top: 0;
     left: 0px;
+    width: 100%;
+    padding: 15px 25px;
 
 }
 
@@ -65,43 +66,5 @@ input {
 .main_wrapper {
 
     background: #FFF;
-
-}
-
-.stat {
-
-    background: #F4F7FA;
-    border-bottom: 1px solid #E2E7EC;
-
-    &__item {
-
-        color: #5A6779;
-        text-align: center;
-        border-right: 1px solid #E2E7EC;
-
-        padding: 25px 0;
-
-        &:last-of-type {
-
-            border-right: 0;
-
-        }
-
-    }
-
-    &__counter {
-
-        font-size: 40px;
-        font-weight: bold;
-
-    }
-
-    &__small {
-
-        text-transform: uppercase;
-        font-weight: bold;
-        color: #8E9AA9;
-
-    }
 
 }

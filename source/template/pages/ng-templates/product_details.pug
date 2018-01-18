@@ -5,136 +5,137 @@ header.header.header_gray.d-flex.align-items-center.justify-content-between
     .product_price {{phone.price | currency}}
 
 
-.main_content
+.main_wrapper
+    .main_content
 
-    .product_details
+        .product_details
 
-        .product_details__image
-            img(ng-src="{{mainImageUrl}}" alt="{{phone.name}}")
+            .product_details__image
+                img(ng-src="{{mainImageUrl}}" alt="{{phone.name}}")
 
-        .thumbs_wrapper
-            ul.product_details__thumbs.no-list.d-flex.justify-content-center
+            .thumbs_wrapper
+                ul.product_details__thumbs.no-list.d-flex.justify-content-center
 
-                li.product_details__thumb(ng-repeat="image in phone.images" ng-click="setImage(image)")
-                    img(ng-src="{{image}}" alt="{{phone.name}}")
-
-
-        .product_details__info
-        
-            p.product_details__desc {{phone.description}}
-
-            hr
+                    li.product_details__thumb(ng-repeat="image in phone.images" ng-click="setImage(image)")
+                        img(ng-src="{{image}}" alt="{{phone.name}}")
 
 
-            //////////////////////////
+            .product_details__info
             
-            ul.product_options.no-list
-                li.product_options__li
-                    .product_options__header Availability and Networks
-                    ul.product_options__list
-                        li.product_options__item
-                            .product_options__name Availability
-                            .product_options__val(ng-repeat="availability in phone.availability") {{availability}}
-                li.product_options__li
-                    .product_options__header Battery
-                    ul.product_options__list
-                        li.product_options__item
-                            .product_options__name Type
-                            .product_options__val {{phone.battery.type}}
+                p.product_details__desc {{phone.description}}
 
-                        li.product_options__item
-                            .product_options__name Talk Time
-                            .product_options__val {{phone.battery.talkTime}}
-                        li.product_options__item
-                            .product_options__name Standby time (max)
-                            .product_options__val {{phone.battery.standbyTime}}
-                li.product_options__li
-                    .product_options__header Storage and Memory
-                    ul.product_options__list
-                        li.product_options__item
-                            .product_options__name RAM
-                            .product_options__val {{phone.storage.ram}}
-                        li.product_options__item
-                            .product_options__name Internal Storage
-                            .product_options__val {{phone.storage.flash}}
-                li.product_options__li
-                    .product_options__header Connectivity
-                    ul.product_options__list
-                        li.product_options__item
-                            .product_options__name Network Support
-                            .product_options__val {{phone.connectivity.cell}}
-                        li.product_options__item
-                            .product_options__name WiFi
-                            .product_options__val {{phone.connectivity.wifi}}
-                        li.product_options__item
-                            .product_options__name Bluetooth
-                            .product_options__val {{phone.connectivity.bluetooth}}
-                        li.product_options__item
-                            .product_options__name Infrared
-                            .product_options__val {{phone.connectivity.infrared | checkmark}}
-                        li.product_options__item
-                            .product_options__name GPS
-                            .product_options__val {{phone.connectivity.gps | checkmark}}
-                li.product_options__li
-                    .product_options__header Android
-                    ul.product_options__list
-                        li.product_options__item
-                            .product_options__name OS Version
-                            .product_options__val {{phone.android.os}}
-                        li.product_options__item
-                            .product_options__name UI
-                            .product_options__val {{phone.android.ui}}
-                li.product_options__li
-                    .product_options__header Size and Weight
-                    ul.product_options__list
-                        li.product_options__item
-                            .product_options__name Dimensions
-                            .product_options__val(ng-repeat="dim in phone.sizeAndWeight.dimensions") {{dim}}
-                        li.product_options__item
-                            .product_options__name Weight
-                            .product_options__val {{phone.sizeAndWeight.weight}}
-                li.product_options__li
-                    .product_options__header Display
-                    ul.product_options__list
-                        li.product_options__item
-                            .product_options__name Screen size
-                            .product_options__val {{phone.display.screenSize}}
-                        li.product_options__item
-                            .product_options__name Screen resolution
-                            .product_options__val {{phone.display.screenResolution}}
-                        li.product_options__item
-                            .product_options__name Touch screen
-                            .product_options__val {{phone.display.touchScreen | checkmark}}
-                li.product_options__li
-                    .product_options__header Hardware
-                    ul.product_options__list
-                        li.product_options__item
-                            .product_options__name CPU
-                            .product_options__val {{phone.hardware.cpu}}
-                        li.product_options__item
-                            .product_options__name USB
-                            .product_options__val {{phone.hardware.usb}}
-                        li.product_options__item
-                            .product_options__name Audio / headphone jack
-                            .product_options__val {{phone.hardware.audioJack}}
-                        li.product_options__item
-                            .product_options__name FM Radio
-                            .product_options__val {{phone.hardware.fmRadio | checkmark}}
-                        li.product_options__item
-                            .product_options__name Accelerometer
-                            .product_options__val {{phone.hardware.accelerometer | checkmark}}
-                li.product_options__li
-                    .product_options__header Camera
-                    ul.product_options__list
-                        li.product_options__item
-                            .product_options__name Primary
-                            .product_options__val {{phone.camera.primary}}
-                        li.product_options__item
-                            .product_options__name Features
-                            .product_options__val {{phone.camera.features.join(', ')}}
-                li.product_options__li
-                    .product_options__header Additional Features
-                        li.product_options__item
-                            .product_options__name {{phone.additionalFeatures}}
+                hr
+
+
+                //////////////////////////
+                
+                ul.product_options.no-list
+                    li.product_options__li
+                        .product_options__header Availability and Networks
+                        ul.product_options__list
+                            li.product_options__item
+                                .product_options__name Availability
+                                .product_options__val(ng-repeat="availability in phone.availability") {{availability}}
+                    li.product_options__li
+                        .product_options__header Battery
+                        ul.product_options__list
+                            li.product_options__item
+                                .product_options__name Type
+                                .product_options__val {{phone.battery.type}}
+
+                            li.product_options__item
+                                .product_options__name Talk Time
+                                .product_options__val {{phone.battery.talkTime}}
+                            li.product_options__item
+                                .product_options__name Standby time (max)
+                                .product_options__val {{phone.battery.standbyTime}}
+                    li.product_options__li
+                        .product_options__header Storage and Memory
+                        ul.product_options__list
+                            li.product_options__item
+                                .product_options__name RAM
+                                .product_options__val {{phone.storage.ram}}
+                            li.product_options__item
+                                .product_options__name Internal Storage
+                                .product_options__val {{phone.storage.flash}}
+                    li.product_options__li
+                        .product_options__header Connectivity
+                        ul.product_options__list
+                            li.product_options__item
+                                .product_options__name Network Support
+                                .product_options__val {{phone.connectivity.cell}}
+                            li.product_options__item
+                                .product_options__name WiFi
+                                .product_options__val {{phone.connectivity.wifi}}
+                            li.product_options__item
+                                .product_options__name Bluetooth
+                                .product_options__val {{phone.connectivity.bluetooth}}
+                            li.product_options__item
+                                .product_options__name Infrared
+                                .product_options__val {{phone.connectivity.infrared | checkmark}}
+                            li.product_options__item
+                                .product_options__name GPS
+                                .product_options__val {{phone.connectivity.gps | checkmark}}
+                    li.product_options__li
+                        .product_options__header Android
+                        ul.product_options__list
+                            li.product_options__item
+                                .product_options__name OS Version
+                                .product_options__val {{phone.android.os}}
+                            li.product_options__item
+                                .product_options__name UI
+                                .product_options__val {{phone.android.ui}}
+                    li.product_options__li
+                        .product_options__header Size and Weight
+                        ul.product_options__list
+                            li.product_options__item
+                                .product_options__name Dimensions
+                                .product_options__val(ng-repeat="dim in phone.sizeAndWeight.dimensions") {{dim}}
+                            li.product_options__item
+                                .product_options__name Weight
+                                .product_options__val {{phone.sizeAndWeight.weight}}
+                    li.product_options__li
+                        .product_options__header Display
+                        ul.product_options__list
+                            li.product_options__item
+                                .product_options__name Screen size
+                                .product_options__val {{phone.display.screenSize}}
+                            li.product_options__item
+                                .product_options__name Screen resolution
+                                .product_options__val {{phone.display.screenResolution}}
+                            li.product_options__item
+                                .product_options__name Touch screen
+                                .product_options__val {{phone.display.touchScreen | checkmark}}
+                    li.product_options__li
+                        .product_options__header Hardware
+                        ul.product_options__list
+                            li.product_options__item
+                                .product_options__name CPU
+                                .product_options__val {{phone.hardware.cpu}}
+                            li.product_options__item
+                                .product_options__name USB
+                                .product_options__val {{phone.hardware.usb}}
+                            li.product_options__item
+                                .product_options__name Audio / headphone jack
+                                .product_options__val {{phone.hardware.audioJack}}
+                            li.product_options__item
+                                .product_options__name FM Radio
+                                .product_options__val {{phone.hardware.fmRadio | checkmark}}
+                            li.product_options__item
+                                .product_options__name Accelerometer
+                                .product_options__val {{phone.hardware.accelerometer | checkmark}}
+                    li.product_options__li
+                        .product_options__header Camera
+                        ul.product_options__list
+                            li.product_options__item
+                                .product_options__name Primary
+                                .product_options__val {{phone.camera.primary}}
+                            li.product_options__item
+                                .product_options__name Features
+                                .product_options__val {{phone.camera.features.join(', ')}}
+                    li.product_options__li
+                        .product_options__header Additional Features
+                            li.product_options__item
+                                .product_options__name {{phone.additionalFeatures}}
 
 

@@ -18,7 +18,13 @@ phoneStoreApp = angular.module('phoneStoreApp', ['ngRoute', 'ngResource'])
         .when('/about', {
 
             templateUrl: 'ng-templates/about.html',
-            controller: 'AboutSkillCtrl'
+            controller: 'AboutStoreCtrl'
+
+        })
+        .when('/contacts', {
+
+            templateUrl: 'ng-templates/contacts.html',
+            controller: 'ContactsStoreCtrl'
 
         })
         .otherwise({
@@ -44,6 +50,23 @@ phoneStoreApp = angular.module('phoneStoreApp', ['ngRoute', 'ngResource'])
     }
 ])
 
+.factory('SetNavClass', [
+
+    '$resource', function($resource) {
+
+        return function(dir) {
+
+            if( !dir ) var dir = 'home';
+
+            $(".navigation__item_active").removeClass("navigation__item_active");
+            $(".navigation__item[data-nav-target='"+dir+"']").addClass("navigation__item_active");
+
+        }
+
+    }
+])
+
+
 .filter('instock', function() {
 
     return function(input) {
@@ -60,19 +83,9 @@ phoneStoreApp = angular.module('phoneStoreApp', ['ngRoute', 'ngResource'])
     }
 })
 
-.controller('AboutSkillCtrl', ['$scope',
+.controller('MainStoreCtrl', ['$scope', '$http', 'SetNavClass',
 
-    function($scope) {
-
-        $scope.message = 'About Page';
-
-    }
-
-])
-
-.controller('MainStoreCtrl', ['$scope', '$http',
-
-    function($scope, $http) {
+    function($scope, $http, SetNavClass) {
 
         $scope.search_query= '',
             $scope.orderReverse = false,
@@ -86,7 +99,7 @@ phoneStoreApp = angular.module('phoneStoreApp', ['ngRoute', 'ngResource'])
 
         };
 
-        $(".navigation__item[data-nav-target='home']").addClass("navigation__item_active");
+        SetNavClass('home');
 
         $scope.orderName = $scope.orderList[$scope.orderVal].name;
 
@@ -104,6 +117,28 @@ phoneStoreApp = angular.module('phoneStoreApp', ['ngRoute', 'ngResource'])
             $scope.orderName = $scope.orderList[$scope.orderVal].name;
 
         }
+
+    }
+
+])
+
+.controller('AboutStoreCtrl', ['$scope', '$http', 'SetNavClass',
+
+    function($scope, $http, SetNavClass) {
+
+
+        SetNavClass('about');
+
+    }
+
+])
+
+.controller('ContactsStoreCtrl', ['$scope', '$http', 'SetNavClass',
+
+    function($scope, $http, SetNavClass) {
+
+
+        SetNavClass('contacts');
 
     }
 
